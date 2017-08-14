@@ -24,7 +24,7 @@ cd ~/.bytecoin
 rm blocks.bin blockindexes.bin
 
 #DOWNLOAD THE BLOCKCHAIN ZIP FILE
-wget $URL
+wget $URL1
 
 #UNZIP THE DOWNLOADED ZIP FILE
 unzip $FILE1;
