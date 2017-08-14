@@ -25,9 +25,11 @@ rm blocks.bin blockindexes.bin
 
 #DOWNLOAD THE BLOCKCHAIN ZIP FILE
 wget $URL1
+sleep 10
 
 #UNZIP THE DOWNLOADED ZIP FILE
 unzip $FILE1;
+sleep 10
 
 #MOVE THE UNZIPPED FILES TO THE PROPER LOCATION
 mv blockchain-$BLOCKCHAIN_DATE/blockindexes.bin .
