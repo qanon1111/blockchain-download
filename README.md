@@ -2,10 +2,50 @@
 
 This Project allows you to download the entire Bytecoin blockchain in one shot so that you don't have to wait days or weeks for your wallet to sync.
 
-Running the insluded scripts will automatically put the blockchain in the right place for your operating system.
+Running the included scripts will automatically put the blockchain in the right place for your operating system.
 
 ### Windows:
-Coming soon...
+
+Follow the below steps to download the blockchain using the PowerShell Command Line Utility built into all windows.
+
+1) Open up the traditional Command line utility cmd:
+* Press the Windows Button
+* Type in `cmd` and press enter. A black screen window will open up awaiting your commands.
+
+2) Navigate to your bytecoin's Data Directory:
+* Type in: `cd c:\Users\%username%\AppData\Roaming\bytecoin\` and press Enter.
+
+3) Open up the PowerShell utility:
+* Type in: `powershell` and press Enter
+* You will see a PS showing at the very left of the new line.
+
+4) Paste in the Region that is Closest to you to get Faster Download Speeds:
+* The Region needs to be a value of either `eu` for Europe, `us` for North America, or "as" for Asia.
+`$REGION = "as"`
+`$REGION = "us"`
+`$REGION = "eu"`
+
+5) Paste in All of the Below and Wait for the Full Blockchain to Download at Lightning Speed
+
+```
+#TO-DO ADD LOGIC TO AUTO GET THE CURRENT DATE
+$BLOCKCHAIN_DATE="2017-20-04"
+
+#MOVE/BACKUP ANY CURRENTLY EXISTING INCOMPLETE BLOCKCHAIN FILES
+mkdir BackupBlockchain
+mv blockindexes.bin BackupBlockchain/
+mv blocks.bin BackupBlockchain/
+
+$BUCKET = "bcn-blockchain-$REGION"
+$URL1="https://storage.googleapis.com/$BUCKET/$BLOCKCHAIN_DATE/blockindexes.bin"
+$URL2="https://storage.googleapis.com/$BUCKET/$BLOCKCHAIN_DATE/blocks.bin"
+
+#DO THE ACTUAL BLOCKCHAIN DOWNLOAD
+curl $URL1
+curl $URL2
+
+echo "The Blockchain is now Downloaded. Please open the Bytecoin GUI App and allow it up to an hour to officially load up and read the entire blockchain"
+```
 
 ### Mac OSX / Linux:
 
