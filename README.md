@@ -21,9 +21,9 @@ Follow the below steps to download the blockchain using the PowerShell Command L
 
 4) Paste in the Region that is Closest to you to get Faster Download Speeds:
 * The Region needs to be a value of either `eu` for Europe, `us` for North America, or "as" for Asia.
-`$REGION = "as"`
-`$REGION = "us"`
-`$REGION = "eu"`
+* `$REGION = "as"`
+* `$REGION = "us"`
+* `$REGION = "eu"`
 
 5) Paste in All of the Below and Wait for the Full Blockchain to Download at Lightning Speed
 
