@@ -20,7 +20,7 @@ Follow the below steps to download the blockchain using the PowerShell Command L
 * You will see a PS showing at the very left of the new line.
 
 4) Paste in the Region that is Closest to you to get Faster Download Speeds:
-* The Region needs to be a value of either `eu` for Europe, `us` for North America, or "as" for Asia.
+* The Region needs to be a value of either `eu` for Europe, `us` for North America, or `as` for Asia.
 * `$REGION = "as"`
 * `$REGION = "us"`
 * `$REGION = "eu"`
