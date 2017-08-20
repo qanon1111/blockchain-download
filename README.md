@@ -59,12 +59,13 @@ Paste in the below commands and your blockchain download will begin.
 ```
 git clone https://github.com/bytecoin-dev/blockchain-download.git
 cd blockchain-download
-./macOS_linux_download.sh
+./macOS_linux_download.sh eu
 ```
 
-##### Dependencies: unzip
-You might get the error "./macOS_linux_download.sh: unzip: not found"
+##### Note:
 
-If you do, then run the below to resolve the dependency:
+The last command above can be replaced by one of three regions that is cosed to you as in the below:
 
-ubuntu: `sudo apt-get install unzip`
+Replace `./macOS_linux_download.sh eu` with `./macOS_linux_download.sh us` for the Notrh America Region.  
+OR  
+Replace `./macOS_linux_download.sh eu` with `./macOS_linux_download.sh as` for the Asia Region.
