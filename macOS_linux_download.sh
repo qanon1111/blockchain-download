@@ -3,15 +3,39 @@
 #THIS SCRIPT AUTOMATCALLY DOWNLOADS THE BLOCKCHAIN FILES INTO YOUR YOUR ~/.bytecoind directory
 
 #REGION NEEDS TO BE A VAULE OF "EU", "US", OR "AS"
+export VALID_REGION=FALSE
 
-#CURRENT TEST URL
-#https://storage.googleapis.com/bcn-blockchain-test-us-east/blockchain-20170804.zip
+if [ $1 == "us" ]
+then
+    VALID_REGION=TRUE
+fi
 
-#TO-DO ADD LOGIC TO AUTO GET THE CURRENT DATE
-export BLOCKCHAIN_DATE="20170804"
+if [ $1 == "eu" ]
+then
+    VALID_REGION=TRUE
+fi
 
-export REGION="us-east"
-export BUCKET="bcn-blockchain-test-$REGION"
+if [ $1 == "as" ]
+then
+    VALID_REGION=TRUE
+fi
+
+if [ $VALID_REGION == FALSE ]
+then
+    echo "ERROR: No valid region was passed into the script"
+    echo "Please try again with a valid region like in the below examples"
+    echo ""
+    echo "./macOS_linux_download.sh eu"
+    echo "./macOS_linux_download.sh us"
+    echo "./macOS_linux_download.sh as"
+    exit 1
+fi
+
+#AUTO GET THE CURRENT DATE
+export BLOCKCHAIN_DATE=`curl -s http://download.bytecoindev.io/blockdate`
+
+export REGION=$1
+export BUCKET="bcn-blockchain-$REGION"
 export FILE1="blockchain-$BLOCKCHAIN_DATE.zip"
 #export FILE2=""
 export URL1="https://storage.googleapis.com/$BUCKET/$FILE1"
@@ -20,8 +44,10 @@ export URL1="https://storage.googleapis.com/$BUCKET/$FILE1"
 
 cd ~/.bytecoin
 
-#REMOVE THE CURRENT BLOCKCHAIN FILES
-rm blocks.bin blockindexes.bin
+#MOVE/BACKUP ANY CURRENTLY EXISTING INCOMPLETE BLOCKCHAIN FILES
+mkdir BackupBlockchain
+mv blockindexes.bin BackupBlockchain/
+mv blocks.bin BackupBlockchain/
 
 #DOWNLOAD THE BLOCKCHAIN ZIP FILE
 wget $URL1
