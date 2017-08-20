@@ -36,10 +36,8 @@ export BLOCKCHAIN_DATE=`curl -s http://download.bytecoindev.io/blockdate`
 
 export REGION=$1
 export BUCKET="bcn-blockchain-$REGION"
-export FILE1="blockchain-$BLOCKCHAIN_DATE.zip"
-#export FILE2=""
-export URL1="https://storage.googleapis.com/$BUCKET/$FILE1"
-#export URL2="https://storage.googleapis.com/$BUCKET/"
+export URL1="https://storage.googleapis.com/$BUCKET/$BLOCKCHAIN_DATE/blockindexes.bin"
+export URL2="https://storage.googleapis.com/$BUCKET/$BLOCKCHAIN_DATE/blocks.bin"
 
 
 cd ~/.bytecoin
@@ -49,21 +47,9 @@ mkdir BackupBlockchain
 mv blockindexes.bin BackupBlockchain/
 mv blocks.bin BackupBlockchain/
 
-#DOWNLOAD THE BLOCKCHAIN ZIP FILE
+#DOWNLOAD THE ACTUAL BLOCKCHAIN FILES
 wget $URL1
-sleep 10
+wget $URL1
 
-#UNZIP THE DOWNLOADED ZIP FILE
-unzip $FILE1;
-sleep 10
-
-#MOVE THE UNZIPPED FILES TO THE PROPER LOCATION
-mv blockchain-$BLOCKCHAIN_DATE/blockindexes.bin .
-mv blockchain-$BLOCKCHAIN_DATE/blocks.bin .
-
-#REMOVE LEFTOVER ARTIFACTS
-rm $FILE1
-rmdir blockchain-$BLOCKCHAIN_DATE
-
-echo "The blockchain is now downloaded and installed."
-echo "Please start your Bytecoin GUI and allow > 20 minutes for it to load the new blockchain properly"
+echo "The Blockchain is now Downloaded!"
+echo "Please open the Bytecoin GUI App and allow it up to an hour to officially load up and read the entire blockchain"
