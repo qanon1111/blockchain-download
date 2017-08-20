@@ -49,7 +49,7 @@ mv blocks.bin BackupBlockchain/
 
 #DOWNLOAD THE ACTUAL BLOCKCHAIN FILES
 wget $URL1
-wget $URL1
+wget $URL2
 
 echo "The Blockchain is now Downloaded!"
 echo "Please open the Bytecoin GUI App and allow it up to an hour to officially load up and read the entire blockchain"
