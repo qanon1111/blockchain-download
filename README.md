@@ -44,7 +44,8 @@ $URL2="https://storage.googleapis.com/$BUCKET/$BLOCKCHAIN_DATE/blocks.bin"
 curl $URL1
 curl $URL2
 
-echo "The Blockchain is now Downloaded. Please open the Bytecoin GUI App and allow it up to an hour to officially load up and read the entire blockchain"
+echo "The Blockchain is now Downloaded!"
+echo "Please open the Bytecoin GUI App and allow it up to an hour to officially load up and read the entire blockchain"
 ```
 
 ### Mac OSX / Linux:
