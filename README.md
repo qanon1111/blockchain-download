@@ -36,7 +36,7 @@ mkdir BackupBlockchain
 mv blockindexes.bin BackupBlockchain/
 mv blocks.bin BackupBlockchain/
 
-$BUCKET = "bcn-blockchain-$REGION"
+$BUCKET="bcn-blockchain-$REGION"
 $URL1="https://storage.googleapis.com/$BUCKET/$BLOCKCHAIN_DATE/blockindexes.bin"
 $URL2="https://storage.googleapis.com/$BUCKET/$BLOCKCHAIN_DATE/blocks.bin"
 
@@ -61,7 +61,7 @@ cd blockchain-download
 ./macOS_linux_download.sh
 ```
 
-Dependencies: unzip
+##### Dependencies: unzip
 You might get the error "./macOS_linux_download.sh: unzip: not found"
 
 If you do, then run the below to resolve the dependency:
