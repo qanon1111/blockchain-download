@@ -8,24 +8,24 @@ Running the included scripts will automatically put the blockchain in the right 
 
 Follow the below steps to download the blockchain using the PowerShell Command Line Utility built into all windows.
 
-1) Open up the traditional Command line utility cmd:
+**1) Open up the traditional Command line utility cmd:**
 * Press the Windows Button
 * Type in `cmd` and press enter. A black screen window will open up awaiting your commands.
 
-2) Navigate to your bytecoin's Data Directory:
+**2) Navigate to your bytecoin's Data Directory:**
 * Type in: `cd c:\Users\%username%\AppData\Roaming\bytecoin\` and press Enter.
 
-3) Open up the PowerShell utility:
+**3) Open up the PowerShell utility:**
 * Type in: `powershell` and press Enter
 * You will see a PS showing at the very left of the new line.
 
-4) Paste in the Region that is Closest to you to get Faster Download Speeds:
+**4) Paste in the Region that is Closest to you to get Faster Download Speeds:**
 * The Region needs to be a value of either `eu` for Europe, `us` for North America, or `as` for Asia.
 * `$REGION = "as"`
 * `$REGION = "us"`
 * `$REGION = "eu"`
 
-5) Paste in All of the Below and Wait for the Full Blockchain to Download at Lightning Speed
+**5) Paste in All of the Below and Wait for the Full Blockchain to Download at Lightning Speed**
 
 ```
 #TO-DO ADD LOGIC TO AUTO GET THE CURRENT DATE
