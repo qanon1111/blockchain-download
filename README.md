@@ -71,3 +71,8 @@ The last command above can be replaced by one of three regions that is cosed to 
 Replace `./macOS_linux_download.sh eu` with `./macOS_linux_download.sh us` for the Notrh America Region.  
 OR  
 Replace `./macOS_linux_download.sh eu` with `./macOS_linux_download.sh as` for the Asia Region.
+
+### Dependencies: Mac / Linux
+
+**Git:**  
+Git is the foundation for this Github Site. You can download git from: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
