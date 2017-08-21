@@ -4,6 +4,8 @@ This Project allows you to download the entire Bytecoin blockchain in one shot s
 
 Running the included scripts will automatically put the blockchain in the right place for your operating system.
 
+Be sure to stop any running Bytecoin Gui Wallets or bytecoind processes before running these. Also, you must have at least ran your bytecoin wallet or processes at least one time before running any of the below.
+
 ### Windows:
 
 Follow the below steps to download the blockchain using the PowerShell Command Line Utility built into all windows.
