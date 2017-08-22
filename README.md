@@ -30,8 +30,9 @@ Follow the below steps to download the blockchain using the PowerShell Command L
 **5) Paste in All of the Below and Wait for the Full Blockchain to Download at Lightning Speed**
 
 ```
-#TO-DO ADD LOGIC TO AUTO GET THE CURRENT DATE
-$BLOCKCHAIN_DATE="2017-20-04"
+#AUTO GET THE CURRENT AVAILABLE BLOCKCHAIN DATE FROM http://download.bytecoindev.io/blockdate
+$REQUEST=curl -Uri http://download.bytecoindev.io/blockdate
+$BLOCKCHAIN_DATE=$REQUEST.Content
 
 #MOVE/BACKUP ANY CURRENTLY EXISTING INCOMPLETE BLOCKCHAIN FILES
 mkdir BackupBlockchain
