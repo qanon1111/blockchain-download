@@ -44,8 +44,8 @@ $URL1="https://storage.googleapis.com/$BUCKET/$BLOCKCHAIN_DATE/blockindexes.bin"
 $URL2="https://storage.googleapis.com/$BUCKET/$BLOCKCHAIN_DATE/blocks.bin"
 
 #DO THE ACTUAL BLOCKCHAIN DOWNLOAD
-curl $URL1
-curl $URL2
+curl $URL1 -OutFile blockindexes.bin
+curl $URL2 -OutFile blocks.bin
 
 echo "The Blockchain is now Downloaded!"
 echo "Please open the Bytecoin GUI App and allow it up to an hour to officially load up and read the entire blockchain"
