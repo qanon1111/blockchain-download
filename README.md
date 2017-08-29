@@ -35,20 +35,28 @@ $REQUEST=curl -Uri http://download.bytecoindev.io/blockdate
 $BLOCKCHAIN_DATE=$REQUEST.Content
 
 #MOVE/BACKUP ANY CURRENTLY EXISTING INCOMPLETE BLOCKCHAIN FILES
+echo "Currently Backing up any already existing blockchain files to folder BackupBlockchain"
 mkdir BackupBlockchain
 mv blockindexes.bin BackupBlockchain/
 mv blocks.bin BackupBlockchain/
+echo "Done backing up existing blockchain files"
 
 $BUCKET="bcn-blockchain-$REGION"
 $URL1="https://storage.googleapis.com/$BUCKET/$BLOCKCHAIN_DATE/blockindexes.bin"
 $URL2="https://storage.googleapis.com/$BUCKET/$BLOCKCHAIN_DATE/blocks.bin"
 
+echo "Starting the downloads from the below locations:"
+echo "$URL1"
+echo "$URL2"
+
 #DO THE ACTUAL BLOCKCHAIN DOWNLOAD
 curl $URL1 -OutFile blockindexes.bin
+echo "Done Downloading blockindexes.bin file and Starting the download of the actual blockchain file: blocks.bin"
+echo "Please wait a few hours for the increasing number to reach above 8,910,111,213) (8+ Gigabytes)"
 curl $URL2 -OutFile blocks.bin
 
-echo "The Blockchain is now Downloaded!"
-echo "Please open the Bytecoin GUI App and allow it up to an hour to officially load up and read the entire blockchain"
+echo "The Blockchain is now Downloaded!!!!"
+echo "Please open the Bytecoin GUI App and allow it up to a few hours to officially load up and read the entire blockchain into the application"
 ```
 
 ### Mac OSX / Linux:
