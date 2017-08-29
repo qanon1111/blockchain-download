@@ -4,7 +4,7 @@ This Project allows you to download the entire Bytecoin blockchain in one shot s
 
 Running the included scripts will automatically put the blockchain in the right place for your operating system.
 
-Be sure to stop any running Bytecoin Gui Wallets or bytecoind processes before running these. Also, you must have at least ran your bytecoin wallet or processes at least one time before running any of the below.
+**WARNING:** Be sure to stop any running Bytecoin Gui Wallets or bytecoind processes before running these. Also, you must have at least ran your bytecoin wallet or processes at least one time before running any of the below.
 
 ### Windows:
 
@@ -59,7 +59,7 @@ echo "The Blockchain is now Downloaded!!!!"
 echo "Please open the Bytecoin GUI App and allow it up to a few hours to officially load up and read the entire blockchain into the application"
 ```
 
-**6) Press ENTER and Wait for the Full Blockchain to Download at Lightning Speed**
+**6) Press ENTER and Wait for the Full Blockchain to Download at Lightning Speed.**
 
 ### Mac OSX / Linux:
 
