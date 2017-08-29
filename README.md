@@ -4,7 +4,7 @@ This Project allows you to download the entire Bytecoin blockchain in one shot s
 
 Running the included scripts will automatically put the blockchain in the right place for your operating system.
 
-Be sure to stop any running Bytecoin Gui Wallets or bytecoind processes before running these. Also, you must have at least ran your bytecoin wallet or processes at least one time before running any of the below.
+**WARNING:** Be sure to stop any running Bytecoin Gui Wallets or bytecoind processes before running these. Also, you must have at least ran your bytecoin wallet or processes at least one time before running any of the below.
 
 ### Windows:
 
@@ -27,7 +27,7 @@ Follow the below steps to download the blockchain using the PowerShell Command L
 * `$REGION = "us"`
 * `$REGION = "eu"`
 
-**5) Paste in All of the Below and Wait for the Full Blockchain to Download at Lightning Speed**
+**5) Paste in All of the Below.**
 
 ```
 #AUTO GET THE CURRENT AVAILABLE BLOCKCHAIN DATE FROM http://download.bytecoindev.io/blockdate
@@ -35,21 +35,31 @@ $REQUEST=curl -Uri http://download.bytecoindev.io/blockdate
 $BLOCKCHAIN_DATE=$REQUEST.Content
 
 #MOVE/BACKUP ANY CURRENTLY EXISTING INCOMPLETE BLOCKCHAIN FILES
+echo "Currently Backing up any already existing blockchain files to folder BackupBlockchain"
 mkdir BackupBlockchain
 mv blockindexes.bin BackupBlockchain/
 mv blocks.bin BackupBlockchain/
+echo "Done backing up existing blockchain files"
 
 $BUCKET="bcn-blockchain-$REGION"
 $URL1="https://storage.googleapis.com/$BUCKET/$BLOCKCHAIN_DATE/blockindexes.bin"
 $URL2="https://storage.googleapis.com/$BUCKET/$BLOCKCHAIN_DATE/blocks.bin"
 
+echo "Starting the downloads from the below locations:"
+echo "$URL1"
+echo "$URL2"
+
 #DO THE ACTUAL BLOCKCHAIN DOWNLOAD
 curl $URL1 -OutFile blockindexes.bin
+echo "Done Downloading blockindexes.bin file and Starting the download of the actual blockchain file: blocks.bin"
+echo "Please wait a few hours for the increasing number to reach above 8,910,111,213) (8+ Gigabytes)"
 curl $URL2 -OutFile blocks.bin
 
-echo "The Blockchain is now Downloaded!"
-echo "Please open the Bytecoin GUI App and allow it up to an hour to officially load up and read the entire blockchain"
+echo "The Blockchain is now Downloaded!!!!"
+echo "Please open the Bytecoin GUI App and allow it up to a few hours to officially load up and read the entire blockchain into the application"
 ```
+
+**6) Press ENTER and Wait for the Full Blockchain to Download at Lightning Speed.**
 
 ### Mac OSX / Linux:
 
