@@ -27,7 +27,7 @@ Follow the below steps to download the blockchain using the PowerShell Command L
 * `$REGION = "us"`
 * `$REGION = "eu"`
 
-**5) Paste in All of the Below and Wait for the Full Blockchain to Download at Lightning Speed**
+**5) Paste in All of the Below.**
 
 ```
 #AUTO GET THE CURRENT AVAILABLE BLOCKCHAIN DATE FROM http://download.bytecoindev.io/blockdate
@@ -58,6 +58,8 @@ curl $URL2 -OutFile blocks.bin
 echo "The Blockchain is now Downloaded!!!!"
 echo "Please open the Bytecoin GUI App and allow it up to a few hours to officially load up and read the entire blockchain into the application"
 ```
+
+**6) Press ENTER and Wait for the Full Blockchain to Download at Lightning Speed**
 
 ### Mac OSX / Linux:
 
