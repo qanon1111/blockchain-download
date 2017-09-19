@@ -12,7 +12,10 @@ Follow the below steps to download the blockchain using the PowerShell Command L
 
 **1) Open up the traditional Command line utility cmd:**
 * Press the Windows Button
-* Type in `cmd` and press enter. A black screen window will open up awaiting your commands.
+* Type in  
+```cmd```
+* then press Enter.
+* A black screen window will open up awaiting your commands.
 
 **2) Navigate to your bytecoin's Data Directory:**
 * Type in:  
