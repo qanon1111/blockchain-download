@@ -32,7 +32,7 @@ then
 fi
 
 #AUTO GET THE CURRENT DATE
-export BLOCKCHAIN_DATE=`curl -s http://download.bytecoindev.io/blockdate`
+export BLOCKCHAIN_DATE=`curl -s -k https://blockdate.bytecoindev.io`
 
 export REGION=$1
 export BUCKET="bcn-blockchain-$REGION"
