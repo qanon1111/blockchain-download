@@ -1,4 +1,4 @@
-# blockchain-download
+# blockchain-download (Currenly Unavailabe / Servers are down / DO NOT USE until this message is removed)
 
 This Project allows you to download the entire Bytecoin blockchain in one shot so that you don't have to wait days or weeks for your wallet to sync.
 
